@@ -1,9 +1,9 @@
 fetch('https://jsonplaceholder.typicode.com/comments')
     .then(res => res.json())
-    .then(data => loadPosts(data))
+    .then(data => loadComments(data))
 
 
-function loadPosts(comments) {
+function loadComments(comments) {
     const postsContainer = document.getElementById('comment-container');
     for (const comment of comments) {
         const div = document.createElement('div');
